@@ -8,6 +8,7 @@ package models;
 /**
  *
  * @author Patrick
+ * manager javabean
  */
 public class Manager {
     private String username;
