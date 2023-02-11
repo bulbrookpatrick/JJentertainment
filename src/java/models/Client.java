@@ -8,26 +8,27 @@ package models;
 /**
  *
  * @author Patrick
- * manager javabean
  */
-public class Manager {
+public class Client {
     private String username;
     private String email;
     private String password;
     private String fName;
     private String lName;
     private int phone;
+    private int prefer;
 
-    public Manager() {
+    public Client() {
     }
 
-    public Manager(String username, String email, String password, String fName, String lName, int phone) {
+    public Client(String username, String email, String password, String fName, String lName, int phone, int prefer) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.fName = fName;
         this.lName = lName;
         this.phone = phone;
+        this.prefer = prefer;
     }
 
     public String getUsername() {
@@ -76,6 +77,14 @@ public class Manager {
 
     public void setPhone(int phone) {
         this.phone = phone;
+    }
+
+    public int getPrefer() {
+        return prefer;
+    }
+
+    public void setPrefer(int prefer) {
+        this.prefer = prefer;
     }
     
     
