@@ -22,7 +22,7 @@ public class ConnectionPool {
     private ConnectionPool() {
         try {
             InitialContext ic = new InitialContext();
-            dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/JJentertainmentdb");
+            dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/jjentertainmentdb");
         } catch (NamingException e) {
             System.out.println(e);
         }
