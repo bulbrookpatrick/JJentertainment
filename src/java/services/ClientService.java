@@ -8,6 +8,7 @@ package services;
 import java.util.List;
 import dataAccess.ClientDB;
 import models.Client;
+import dataAccess.ClientDB;
 /**
  *
  * @author Patrick
@@ -28,8 +29,11 @@ public class ClientService {
         return null;
         }
     
-
-    
+    public List<Client> getAll() throws Exception {
+        ClientDB ClientDB = new ClientDB();
+        List<Client> clients = ClientDB.getAll();
+        return clients;
+    }
     
     public Client get(String email) throws Exception {
         ClientDB clientDB = new ClientDB();
@@ -56,5 +60,7 @@ public class ClientService {
         ClientDB clientDB = new ClientDB();
         clientDB.delete(client);
     }
+    
+    
     
 }
