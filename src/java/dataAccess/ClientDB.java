@@ -60,7 +60,7 @@ public class ClientDB {
         PreparedStatement ps = null;
         ResultSet rs = null;
         
-        String sql = "select * from client where email=?";
+        String sql = "select * from client where client_email=?";
         
         try {
             ps = con.prepareStatement(sql);
@@ -125,7 +125,7 @@ public class ClientDB {
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
-        String sql = "update client set client_username=?, client_email=?, client_password=?, client_first_name=?, client_last_name=?, client_phone_number=?, client_prefferred_contact=? where email = ?";
+        String sql = "update client set client_username=?, client_email=?, client_password=?, client_first_name=?, client_last_name=?, client_phone_number=?, client_prefferred_contact=? where client_email = ?";
         
         try {
             ps = con.prepareStatement(sql);
@@ -154,7 +154,7 @@ public class ClientDB {
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
-        String sql = "delete from client where email=?";
+        String sql = "delete from client where client_email=?";
         
         try {
             ps = con.prepareStatement(sql);

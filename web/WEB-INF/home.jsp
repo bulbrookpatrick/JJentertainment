@@ -12,7 +12,7 @@
         <title>home</title>
     </head>
     <body>
-        
+        <h1>${message}</h1>
            <table border="1px">
             <tr>
                 <th>Email</th>
