@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package models;
+package dataaccess;
 
 /**
  *
  * @author kurtm
  */
-public class ttkdljtdrit {
+public class PerformerDB {
     
 }

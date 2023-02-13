@@ -5,13 +5,10 @@
  */
 package services;
 
-import dataacess.ClientDB;
-import models.Client;
-
+/**
+ *
+ * @author kurtm
+ */
 public class ClientService {
-    public Client get(String username) throws Exception {
-        ClientDB clientDB = new ClientDB();
-        Client client = clientDB.get(username);
-        return client;
-    }
+    
 }

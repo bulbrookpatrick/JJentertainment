@@ -5,6 +5,20 @@
  */
 package services;
 
+import dataaccess.CategoryDB;
+import java.util.List;
+import models.Category;
+
+/**
+ *
+ * @author kurtm
+ */
 public class CategoryService {
+
+    public List<Category> getAll() {
+        CategoryDB catdb = new CategoryDB();
+        List<Category> categories = catdb.getAll();
+        return categories;
+    }
     
 }

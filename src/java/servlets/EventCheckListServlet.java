@@ -23,20 +23,22 @@ import services.CategoryService;
  */
 public class EventCheckListServlet extends HttpServlet {
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
         CategoryService cs = new CategoryService();
         List<Category> categories = new ArrayList<>();
-        
+        //categories = cs.getAll();
+        //request.setAttribute("category", categories);
         getServletContext().getRequestDispatcher("/WEB-INF/eventchecklist.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         getServletContext().getRequestDispatcher("/WEB-INF/eventchecklist.jsp").forward(request, response);
     }
-
 }

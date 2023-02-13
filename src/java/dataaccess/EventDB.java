@@ -1,14 +1,14 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor. look
+ * and open the template in the editor.
  */
-package servlets;
+package dataaccess;
 
 /**
  *
- * @author Patrick
+ * @author kurtm
  */
-public class NewClass {
+public class EventDB {
     
 }
