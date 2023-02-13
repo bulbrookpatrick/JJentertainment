@@ -5,6 +5,10 @@
  */
 package services;
 
-public class EventService {
+/**
+ *
+ * @author kurtm
+ */
+public class dummy {
     
 }
