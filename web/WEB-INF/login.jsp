@@ -32,31 +32,31 @@
         <form method="post" action ="register">
             <!--login when registered-->
             <br><label>Email: </label>
-            <input type="text" name="email">
+            <input type="text" name="emailInput">
             <input type="hidden" name="email" value="${emailInput}">
             <br>
             
             <br><label>Password: </label>
-            <input type="text" name="password">
+            <input type="text" name="passwordInput">
             <input type="hidden" name="password" value="${passwordInput}">
             <br>
             
             <br>
             <label>First Name: </label>
-            <input type="text" name="fName">
+            <input type="text" name="fNameInput">
             <input type="hidden" name="fName" value="${fNameInput}">
             <br>
             
             <br>
             <label>Last Name: </label>
-            <input type="text" name="lName"/>
+            <input type="text" name="lNameInput"/>
             <input type="hidden" name="lName" value="${lNameInput}">
             <br>
             
             <br>
             
             <label>Phone Number: </label>
-            <input type="text" name="phone"/>
+            <input type="text" name="phoneInput"/>
             <input type="hidden" name="phone" value="${phoneInput}">
             
             
