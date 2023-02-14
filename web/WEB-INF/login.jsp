@@ -13,6 +13,7 @@
     </head>
     <body>
           <h1>${message}</h1>
+          <h1>${RegisterMessage}
         <!--to do: manager basic user and make inactive/active, check hyperlinks, registration page, update-->
         
         <h1>JJ entertainment</h1>
@@ -27,30 +28,39 @@
            <input type="submit" value="logout">
         </form>
         
-<!--        <h2>Register</h2>
-        <form method="post" action ="user?action=add">
-            <label>Email: </label><input type="email" name="emailInput">
-             <input type="hidden" name="email" value="<c:out value='${emailInput}'></c:out>">
-                    
-            <br><label>Password: </label>
-            <input type="password" value="${passwordInput}" name="password">
-            <input type="hidden" name="fName" value="${passwordInput}">
+        <h2>Register</h2>
+        <form method="post" action ="register">
+            <!--login when registered-->
+            <br><label>Email: </label>
+            <input type="text" name="email">
+            <input type="hidden" name="email" value="${emailInput}">
             <br>
             
+            <br><label>Password: </label>
+            <input type="text" name="password">
+            <input type="hidden" name="password" value="${passwordInput}">
+            <br>
+            
+            <br>
             <label>First Name: </label>
-            <input type="text" value ="${fName}" name="fName">
+            <input type="text" name="fName">
             <input type="hidden" name="fName" value="${fNameInput}">
+            <br>
             
             <br>
             <label>Last Name: </label>
-            <input type="text" name="lNameInput"/>
+            <input type="text" name="lName"/>
             <input type="hidden" name="lName" value="${lNameInput}">
             <br>
             
+            <br>
+            
+            <label>Phone Number: </label>
+            <input type="text" name="phone"/>
+            <input type="hidden" name="phone" value="${phoneInput}">
             
             
-            message when user is added
         <input type ="submit" value="register">
-        </form>-->
+        </form>
     </body>
 </html>

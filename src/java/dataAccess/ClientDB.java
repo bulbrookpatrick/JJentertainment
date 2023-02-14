@@ -92,10 +92,13 @@ public class ClientDB {
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
-        String sql = " Insert into client (client_username, client_email, client_password, client_first_name, client_last_name, client_phone_number, client_prefferred_contact) values (?,?,?,?,?,?,?)";
+        String sql = " Insert into client (client_username, client_email, "
+                + "client_password, client_first_name, client_last_name, "
+                + "client_phone_number, client_preferred_contact) values (?,?,?,?,?,?,?)";
         
         try {
             ps = con.prepareStatement(sql);
+            String user = client.getUsername();
             ps.setString(1, client.getUsername());
             ps.setString(2,client.getEmail()); 
             ps.setString(3, client.getPassword());

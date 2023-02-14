@@ -46,10 +46,12 @@ public class LoginServlet extends HttpServlet {
        String password = request.getParameter("password");
        String action = request.getParameter("action");
       
+              ClientService cs = new ClientService();
+
        
      
+     
        
-       ClientService cs = new ClientService();
        
        
        Client client = cs.login(email, password);

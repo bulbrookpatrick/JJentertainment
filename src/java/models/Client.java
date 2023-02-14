@@ -26,7 +26,7 @@ package models;
  * @author Patrick
  */
 public class Client {
-    
+    //change phone to string
     private String username;
     private String email;
     private String password;

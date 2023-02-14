@@ -14,6 +14,7 @@
     </head>
     <body>
         <h1>${message}</h1>
+        <h1>${RegisterMessage}</h1>
            <table border="1px">
             <tr>
                 <th>username</th>
@@ -34,7 +35,7 @@
                     <td>${client.phone}</td>
                     <td>${client.prefer}</td>
 <td>
-    <form method="post" action="<c:url value='/client?email=${client.email}&amp;fName=${client.fName}&amp;lName=${client.lName}&amp;password=${client.password}&amp;phone=${client.phone}prefer=${client.prefer}&amp;action=delete'></c:url>">
+    <form method="post" action="<c:url value='/home?email=${client.email}&amp;fName=${client.fName}&amp;lName=${client.lName}&amp;password=${client.password}&amp;phone=${client.phone}prefer=${client.prefer}&amp;action=delete'></c:url>">
         <input type="submit" value="remove">
     </form>
               
