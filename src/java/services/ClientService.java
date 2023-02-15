@@ -5,10 +5,64 @@
  */
 package services;
 
+
+import java.util.List;
+import dataAccess.ClientDB;
+import models.Client;
+import dataAccess.ClientDB;
 /**
  *
- * @author kurtm
+ * @author Patrick
  */
 public class ClientService {
+      public Client login(String email, String password) {
+        ClientDB clientDB = new ClientDB();
+        
+        try {
+            Client client = clientDB.get(email);
+            if(password.equals(client.getPassword())) {
+                return client;
+            }
+        }
+            catch (Exception ex) {
+                    
+            }
+        return null;
+        }
+    
+    public List<Client> getAll() throws Exception {
+        ClientDB ClientDB = new ClientDB();
+        List<Client> clients = ClientDB.getAll();
+        return clients;
+    }
+    
+    public Client get(String email) throws Exception {
+        ClientDB clientDB = new ClientDB();
+        Client client = clientDB.get(email);
+        return client;
+    }
+    
+    public void insert(String username, String email, String password, String fName, String lName, int phone, int prefer) throws Exception {
+        Client client = new Client(username, email, password, fName, lName, phone, prefer);
+        ClientDB clientDB = new ClientDB();
+        clientDB.insert(client);
+    }
+    
+    public void update(String username, String email, String password, String fName, String lName, int phone, int prefer) throws Exception {
+        Client client = new Client(username, email, password, fName, lName, phone, prefer);
+        ClientDB clientDB = new ClientDB();
+        clientDB.update(client);
+    }
+    
+
+    public void delete(String email) throws Exception {
+        Client client = new Client();
+        client.setEmail(email);
+        ClientDB clientDB = new ClientDB();
+        clientDB.delete(client);
+    }
+    
+    
+
     
 }

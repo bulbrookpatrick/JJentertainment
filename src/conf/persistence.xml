@@ -9,6 +9,9 @@
     <class>models.Event</class>
     <class>models.Client</class>
     <class>models.Performer</class>
+
+
+
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
   </persistence-unit>
 </persistence>

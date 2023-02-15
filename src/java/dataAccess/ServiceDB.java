@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package models;
+package dataAccess;
 
 /**
  *
  * @author Patrick
  */
-public class client {
-    private String username;
-    private String email;
-    private String password;
-    private String fName;
-    private String lName;
-    private String phone;
+public class ServiceDB {
+    
 }

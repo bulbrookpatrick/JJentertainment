@@ -5,6 +5,7 @@
  */
 package models;
 
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -197,4 +198,5 @@ public class Service implements Serializable {
         return "models.Service[ serviceId=" + serviceId + " ]";
     }
     
+
 }

@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlTransient;
  *
  * @author kurtm
  */
+
 @Entity
 @Table(name = "manager")
 @XmlRootElement
@@ -60,11 +61,14 @@ public class Manager implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "mANAGERmanagerusername", fetch = FetchType.EAGER)
     private List<Performer> performerList;
 
+
     public Manager() {
     }
 
+
     public Manager(String managerUsername) {
         this.managerUsername = managerUsername;
+
     }
 
     public Manager(String managerUsername, String managerEmail, String managerPassword, String managerFirstName, String managerLastName, int managerPhoneNumber) {
@@ -156,6 +160,7 @@ public class Manager implements Serializable {
     @Override
     public String toString() {
         return "models.Manager[ managerUsername=" + managerUsername + " ]";
+
     }
     
 }
