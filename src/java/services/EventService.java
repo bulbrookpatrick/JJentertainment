@@ -5,7 +5,7 @@
  */
 package services;
 
-import dataAccess.EventDB;
+import dataAccess.eventDB;
 import java.util.Date;
 import java.util.List;
 import models.Event;
@@ -16,26 +16,26 @@ import models.Event;
  */
 public class EventService {
        public List<Event> getAll() throws Exception {
-        EventDB EventDB = new EventDB();
+        eventDB EventDB = new eventDB();
         List<Event> events = EventDB.getAll();
         return events;
     }
     
     public Event get(int id) throws Exception {
-        EventDB eventDB = new EventDB();
+        eventDB eventDB = new eventDB();
         Event event = eventDB.get(id);
         return event;
     }
     
     public void insert(int id, Date start, Date end, String location, int status, double interest, double cost) throws Exception {
         Event event = new Event(id, start, end, location, status, interest, cost);
-        EventDB eventDB = new EventDB();
+        eventDB eventDB = new eventDB();
         eventDB.insert(event);
     }
     
     public void update(int id, Date start, Date end, String location, int status, double interest, double cost) throws Exception {
         Event event = new Event(id, start, end, location, status, interest, cost);
-        EventDB eventDB = new EventDB();
+        eventDB eventDB = new eventDB();
         eventDB.update(event);
     }
     
@@ -43,7 +43,7 @@ public class EventService {
     public void delete(int id) throws Exception {
         Event event = new Event();
         event.setId(id);
-        EventDB eventDB = new EventDB();
+        eventDB eventDB = new eventDB();
         eventDB.delete(event);
     }
     

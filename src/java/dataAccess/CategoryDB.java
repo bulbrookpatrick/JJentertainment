@@ -10,15 +10,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import models.Category;
+import models.category;
 
 /**
  *
  * @author Patrick
  */
 public class CategoryDB {
-     public List<Category> getAll() throws Exception {
-        List<Category> categories = new ArrayList<>();
+     public List<category> getAll() throws Exception {
+        List<category> categories = new ArrayList<>();
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
@@ -38,7 +38,7 @@ public class CategoryDB {
                 int min = rs.getInt(4);
                 int max = rs.getInt(5);
 
-                Category category= new Category(name, desc, rate, min, max);
+                category category= new category(name, desc, rate, min, max);
                 
                 categories.add(category);
             }
@@ -51,8 +51,8 @@ public class CategoryDB {
         }
         return categories;
     }
-  public Category get(String name) throws Exception {
-        Category category = null;
+  public category get(String name) throws Exception {
+        category category = null;
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
@@ -70,7 +70,7 @@ public class CategoryDB {
                 int min = rs.getInt(4);
                 int max = rs.getInt(5);
 
-                category= new Category(name, desc, rate, min, max);
+                category= new category(name, desc, rate, min, max);
                 
             }
             
@@ -85,7 +85,7 @@ public class CategoryDB {
         return category;
     }
     
-    public void insert (Category category) throws Exception {
+    public void insert (category category) throws Exception {
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
@@ -120,7 +120,7 @@ public class CategoryDB {
     
  
     
-    public void update(Category category) throws Exception {
+    public void update(category category) throws Exception {
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
@@ -148,7 +148,7 @@ public class CategoryDB {
     
     
     
-    public void delete(Category category) throws Exception {
+    public void delete(category category) throws Exception {
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;

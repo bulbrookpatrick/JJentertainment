@@ -10,7 +10,7 @@
     </servlet>
     <servlet>
         <servlet-name>registerServlet</servlet-name>
-        <servlet-class>servlets.RegisterServlet</servlet-class>
+        <servlet-class>servlets.registerServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>EventServlet</servlet-name>
