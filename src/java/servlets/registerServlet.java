@@ -57,9 +57,9 @@ public class registerServlet extends HttpServlet {
         client.setPassword(request.getParameter("passwordInput"));
         client.setfName(request.getParameter("fNameInput"));
         client.setlName(request.getParameter("lNameInput"));
-        client.setPhone(Integer.parseInt(request.getParameter("phoneInput")));
+        client.setPhone(request.getParameter("phoneInput"));
         client.setPrefer(0);
-        client.setUsername("user");
+        client.setUsername(request.getParameter("emailInput"));
         HttpSession session = request.getSession();
 
         
@@ -71,13 +71,15 @@ public class registerServlet extends HttpServlet {
                     client.getPhone(),
                     client.getPrefer()
             );
+            response.sendRedirect("home");
         }
         catch (Exception ex) {
-            request.setAttribute("RegisterMessage", "users not updated");
+            request.setAttribute("regMessage", "user not registered");
+     getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
         
-        response.sendRedirect("home");
-           
+        
+        
            
        }
     }
