@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `jjentertainmentdb`.`CLIENT` (
   `client_password` VARCHAR(16) NOT NULL,
   `client_first_name` VARCHAR(45) NOT NULL,
   `client_last_name` VARCHAR(45) NOT NULL,
-  `client_phone_number` INT NOT NULL,
+  `client_phone_number` VARCHAR(10) NOT NULL,
   `client_preferred_contact` TINYINT(0),
   PRIMARY KEY (`client_username`),
   UNIQUE (`client_email`));
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `jjentertainmentdb`.`MANAGER` (
   `manager_password` VARCHAR(16) NOT NULL,
   `manager_first_name` VARCHAR(45) NOT NULL,
   `manager_last_name` VARCHAR(45) NOT NULL,
-  `manager_phone_number` INT NOT NULL,
+  `manager_phone_number` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`manager_username`),
   UNIQUE (`manager_email`));
 
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `jjentertainmentdb`.`PERFORMER` (
   `performer_password` VARCHAR(16) NOT NULL,
   `performer_first_name` VARCHAR(45) NOT NULL,
   `performer_last_name` VARCHAR(45) NOT NULL,
-  `performer_phone_number` INT NOT NULL,
+  `performer_phone_number`  VARCHAR(10) NOT NULL,
   `MANAGER_manager_username` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`performer_username`),
   UNIQUE (`performer_email`),

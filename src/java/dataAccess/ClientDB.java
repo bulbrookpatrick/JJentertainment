@@ -38,7 +38,7 @@ public class ClientDB {
                 String password = rs.getString(3);
                 String fName = rs.getString(4);
                 String lName = rs.getString(5);
-                int phone = rs.getInt(6);
+                String phone = rs.getString(6);
                 int prefer = rs.getInt(7);
                 Client client= new Client(username, email, password, fName, lName, phone, prefer);
                 
@@ -71,7 +71,7 @@ public class ClientDB {
                 String password = rs.getString(3);
                 String fName = rs.getString(4);
                 String lName = rs.getString(5);
-                int phone = rs.getInt(6);
+                String phone = rs.getString(6);
                 int prefer = rs.getInt(7);
                 client = new Client(username, email, password, fName, lName, phone, prefer);
                 
@@ -98,13 +98,12 @@ public class ClientDB {
         
         try {
             ps = con.prepareStatement(sql);
-            String user = client.getUsername();
             ps.setString(1, client.getUsername());
             ps.setString(2,client.getEmail()); 
             ps.setString(3, client.getPassword());
             ps.setString(4, client.getfName());
             ps.setString(5, client.getlName());
-            ps.setInt(6, client.getPhone());
+            ps.setString(6, client.getPhone());
             ps.setInt(7, client.getPrefer());
             ps.executeUpdate();
             
@@ -138,7 +137,7 @@ public class ClientDB {
             ps.setString(3, client.getPassword());
             ps.setString(4, client.getfName());
             ps.setString (5, client.getlName());
-            ps.setInt(6, client.getPhone());
+            ps.setString(6, client.getPhone());
             ps.setInt(7,client.getPrefer());
             
             

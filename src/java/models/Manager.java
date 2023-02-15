@@ -16,12 +16,12 @@ public class Manager {
     private String password;
     private String fName;
     private String lName;
-    private int phone;
+    private String phone;
 
     public Manager() {
     }
 
-    public Manager(String username, String email, String password, String fName, String lName, int phone) {
+    public Manager(String username, String email, String password, String fName, String lName, String phone) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -70,11 +70,11 @@ public class Manager {
         this.lName = lName;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
     

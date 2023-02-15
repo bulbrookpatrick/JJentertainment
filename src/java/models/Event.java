@@ -11,27 +11,29 @@ import java.util.Date;
  *
  * @author Patrick
  */
-public class Service {
+public class Event {
     private int id;
+    // use date to perform opertaions on the date
     private Date start;
     private Date end;
-    private int duration;
+    private String location;
+    private int status;
+    private double interest;
     private double cost;
-    private int participants;
-    private int performers;
 
-    public Service() {
+    public Event() {
     }
 
-    public Service(int id, Date start, Date end, int duration, double cost, int participants, int performers) {
+    public Event(int id, Date start, Date end, String location, int status, double interest, double cost) {
         this.id = id;
         this.start = start;
         this.end = end;
-        this.duration = duration;
+        this.location = location;
+        this.status = status;
+        this.interest = interest;
         this.cost = cost;
-        this.participants = participants;
-        this.performers = performers;
     }
+    
 
     public int getId() {
         return id;
@@ -57,12 +59,28 @@ public class Service {
         this.end = end;
     }
 
-    public int getDuration() {
-        return duration;
+    public String getLocation() {
+        return location;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public double getInterest() {
+        return interest;
+    }
+
+    public void setInterest(double interest) {
+        this.interest = interest;
     }
 
     public double getCost() {
@@ -71,22 +89,6 @@ public class Service {
 
     public void setCost(double cost) {
         this.cost = cost;
-    }
-
-    public int getParticipants() {
-        return participants;
-    }
-
-    public void setParticipants(int participants) {
-        this.participants = participants;
-    }
-
-    public int getPerformers() {
-        return performers;
-    }
-
-    public void setPerformers(int performers) {
-        this.performers = performers;
     }
     
     

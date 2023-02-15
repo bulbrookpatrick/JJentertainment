@@ -13,7 +13,7 @@
     </head>
     <body>
           <h1>${message}</h1>
-          <h1>${RegisterMessage}
+          <h1>${regMessage}</h1>
         <!--to do: manager basic user and make inactive/active, check hyperlinks, registration page, update-->
         
         <h1>JJ entertainment</h1>

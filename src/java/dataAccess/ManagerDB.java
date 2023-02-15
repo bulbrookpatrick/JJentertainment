@@ -18,6 +18,10 @@ import models.Manager;
  * @author Patrick
  */
 public class ManagerDB {
+//          public List<Manager> getAll() throws Exception {
+//          return null;
+//          }
+//    
        public Manager get(String email) throws Exception {
         Manager manager = null;
         ConnectionPool cp = ConnectionPool.getInstance();
@@ -36,7 +40,7 @@ public class ManagerDB {
                 String password = rs.getString(3);
                 String fName = rs.getString(4);
                 String lName = rs.getString(5);
-                int phone = rs.getInt(6);
+                String phone = rs.getString(6);
                 
                 manager = new Manager(username, email, password, fName, lName, phone);
                 
@@ -66,7 +70,7 @@ public class ManagerDB {
             ps.setString(3, manager.getPassword());
             ps.setString(4, manager.getfName());
             ps.setString(5, manager.getlName());
-            ps.setInt(6, manager.getPhone());
+            ps.setString(6, manager.getPhone());
             
             ps.executeUpdate();
             
@@ -100,7 +104,7 @@ public class ManagerDB {
             ps.setString(3, manager.getPassword());
             ps.setString(4, manager.getfName());
             ps.setString (5, manager.getlName());
-            ps.setInt(6, manager.getPhone());
+            ps.setString(6, manager.getPhone());
             
             
             

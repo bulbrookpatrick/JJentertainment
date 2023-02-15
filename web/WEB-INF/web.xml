@@ -10,7 +10,11 @@
     </servlet>
     <servlet>
         <servlet-name>registerServlet</servlet-name>
-        <servlet-class>servlets.registerServlet</servlet-class>
+        <servlet-class>servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EventServlet</servlet-name>
+        <servlet-class>servlets.EventServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EventServlet</servlet-name>
+        <url-pattern>/EventServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -41,13 +41,13 @@ public class ClientService {
         return client;
     }
     
-    public void insert(String username, String email, String password, String fName, String lName, int phone, int prefer) throws Exception {
+    public void insert(String username, String email, String password, String fName, String lName, String phone, int prefer) throws Exception {
         Client client = new Client(username, email, password, fName, lName, phone, prefer);
         ClientDB clientDB = new ClientDB();
         clientDB.insert(client);
     }
     
-    public void update(String username, String email, String password, String fName, String lName, int phone, int prefer) throws Exception {
+    public void update(String username, String email, String password, String fName, String lName, String phone, int prefer) throws Exception {
         Client client = new Client(username, email, password, fName, lName, phone, prefer);
         ClientDB clientDB = new ClientDB();
         clientDB.update(client);

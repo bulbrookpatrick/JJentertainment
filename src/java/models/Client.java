@@ -32,7 +32,7 @@ public class Client {
     private String password;
     private String fName;
     private String lName;
-    private int phone;
+    private String phone;
     private int prefer;
 
     public String getUsername() {
@@ -75,11 +75,11 @@ public class Client {
         this.lName = lName;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -91,7 +91,7 @@ public class Client {
         this.prefer = prefer;
     }
 
-    public Client(String username, String email, String password, String fName, String lName, int phone, int prefer) {
+    public Client(String username, String email, String password, String fName, String lName, String phone, int prefer) {
         this.username = username;
         this.email = email;
         this.password = password;
