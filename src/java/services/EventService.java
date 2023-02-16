@@ -27,8 +27,8 @@ public class EventService {
         return event;
     }
     
-    public void insert(Date start, Date end, String location, int status, double interest, double cost) throws Exception {
-        Event event = new Event(start, end, location, status, interest, cost);
+    public void insert(int id, Date start, Date end, String location, int status, double interest, double cost) throws Exception {
+        Event event = new Event(id, start, end, location, status, interest, cost);
         EventDB eventDB = new EventDB();
         eventDB.insert(event);
     }
@@ -46,6 +46,5 @@ public class EventService {
         EventDB eventDB = new EventDB();
         eventDB.delete(event);
     }
-
-   
+    
 }
