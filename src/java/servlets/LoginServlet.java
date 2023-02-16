@@ -78,7 +78,7 @@ public class LoginServlet extends HttpServlet {
        session.setAttribute("phone", client.getPhone());
        session.setAttribute("prefer", client.getPrefer());
        
-       response.sendRedirect("home");
+       response.sendRedirect("event");
 
          
 }
