@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import models.Event;
-
+// event creation established
 /**
  *
  * @author Patrick
