@@ -6,11 +6,10 @@
 package models;
 
 /**
- *
+ * Category model
  * @author Patrick
  */
 public class category {
-    private int id;
     private String name;
     private String desc;
     private double rate;
@@ -20,8 +19,8 @@ public class category {
     public category() {
     }
 
-    public category(int ID, String name, String desc, double rate, int min, int max) {
-        this.id = ID;
+    public category(String name, String desc, double rate, int min, int max) {
+        
         this.name = name;
         this.desc = desc;
         this.rate = rate;
@@ -29,13 +28,7 @@ public class category {
         this.max = max;
     }
 
-    public int getID() {
-        return id;
-    }
-
-    public void setID(int ID) {
-        this.id = ID;
-    }
+   
 
     public String getName() {
         return name;

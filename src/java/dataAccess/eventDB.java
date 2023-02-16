@@ -94,7 +94,7 @@ public class eventDB {
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
-        String sql = " Insert into event (event_id, event_start_date, event_end_date, event_location, event_status, event_interest, event_reservation_cost) values (?,?,?,?,?,?)";
+        String sql = " Insert into event (event_start_date, event_end_date, event_location, event_status, event_interest, event_reservation_cost, CLIENT_client_username) values (?,?,?,?,?,?, 'pat')";
         
         
        // changes java date to long (ms from 1977) to sql date
@@ -103,13 +103,13 @@ public class eventDB {
         
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, event.getId());
-            ps.setDate(2, start); 
-            ps.setDate(3, end);
-            ps.setString(4, event.getLocation());
-            ps.setInt(5, event.getStatus());
-            ps.setDouble(6, event.getInterest());
-            ps.setDouble(7, event.getCost());
+            
+            ps.setDate(1, start); 
+            ps.setDate(2, end);
+            ps.setString(3, event.getLocation());
+            ps.setInt(4, event.getStatus());
+            ps.setDouble(5, event.getInterest());
+            ps.setDouble(6, event.getCost());
             ps.executeUpdate();
             
         }
