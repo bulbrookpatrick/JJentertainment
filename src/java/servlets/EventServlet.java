@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import models.Category;
+import models.category;
 import models.Event;
 import models.Service;
 import services.EventService;
@@ -64,7 +64,7 @@ public class EventServlet extends HttpServlet {
   
         Event event = new Event();
         Service service = new Service();
-        Category category = new Category();
+        category category = new category();
   
         double cost = 0.00;
         String sDate1 =  request.getParameter("date");

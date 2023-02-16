@@ -8,40 +8,40 @@ package services;
 import dataAccess.CategoryDB;
 import java.util.List;
 import javax.naming.Name;
-import models.Category;
+import models.category;
 
 /**
  *
  * @author Patrick
  */
 public class CategoryService {
-      public List<Category> getAll() throws Exception {
+      public List<category> getAll() throws Exception {
         CategoryDB CategoryDB = new CategoryDB();
-        List<Category> categorys = CategoryDB.getAll();
+        List<category> categorys = CategoryDB.getAll();
         return categorys;
     }
     
-    public Category get(String name) throws Exception {
+    public category get(String name) throws Exception {
         CategoryDB categoryDB = new CategoryDB();
-        Category category = categoryDB.get(name);
+        category category = categoryDB.get(name);
         return category;
     }
     
     public void insert(String name, String desc, double rate, int min, int max) throws Exception {
-        Category category = new Category(name, desc, rate, min, max);
+        category category = new category(name, desc, rate, min, max);
         CategoryDB categoryDB = new CategoryDB();
         categoryDB.insert(category);
     }
     
     public void update(String name, String desc, double rate, int min, int max) throws Exception {
-        Category category = new Category(name, desc, rate, min, max);
+        category category = new category(name, desc, rate, min, max);
         CategoryDB categoryDB = new CategoryDB();
         categoryDB.update(category);
     }
     
 
     public void delete(String name) throws Exception {
-        Category category = new Category();
+        category category = new category();
         category.setName(name);
         CategoryDB categoryDB = new CategoryDB();
         categoryDB.delete(category);
