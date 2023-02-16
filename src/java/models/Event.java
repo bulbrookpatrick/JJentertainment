@@ -23,7 +23,15 @@ public class Event {
 
     public Event() {
     }
-
+ public Event(Date start, Date end, String location, int status, double interest, double cost) {
+        id = 0;
+        this.start = start;
+        this.end = end;
+        this.location = location;
+        this.status = status;
+        this.interest = interest;
+        this.cost = cost;
+    }
     public Event(int id, Date start, Date end, String location, int status, double interest, double cost) {
         this.id = id;
         this.start = start;
@@ -33,6 +41,8 @@ public class Event {
         this.interest = interest;
         this.cost = cost;
     }
+    
+   
     
 
     public int getId() {
