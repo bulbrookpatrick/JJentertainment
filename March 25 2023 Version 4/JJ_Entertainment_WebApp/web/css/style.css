@@ -1,0 +1,743 @@
+@media only screen and (max-width: 800px) {
+   h1.index-h1 {
+   max-width: 55%;
+   overflow: hidden;
+   }
+}
+
+/***********************Roxanne***************************/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image:
+            linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.nav{
+    width: 100%;
+    margin: auto;
+    padding: 35px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 50px;
+/*    position: fixed;*/
+    
+}
+.logo {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 50px;
+    position: relative;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: Black;
+    text-transform: uppercase;
+    
+}
+
+.nav ul li::after{
+    content: '';
+    height: 3px ;
+    width: 0;
+    background: #d4af37;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.nav ul li:hover::after{
+    width: 100%;
+}
+/***********************Roxanne***************************/
+
+/***********************for booking and contact*********************************/
+.centerBox{
+/*  border: 2px black inset;*/
+  text-align: center;
+  color: white;
+  background-image:
+            linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(background.jpg);
+/*  background-color: lightblue;*/
+  padding: 50px;
+/*  display: inline-block;*/
+/*  margin: auto;
+  width: 60%;*/
+}
+/***********************for booking and contact*********************************/
+
+
+
+/**********************ABOUT US******************/
+.aboutUsBox{
+/*     border: 2px black inset;*/
+  
+  color: black;
+  background-image:
+            linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(background.jpg);
+/*background-color:#f2f2f2;*/
+  padding: 50px;
+/*  height: 80%;*/
+}
+
+.aboutInnerBox{
+  background-color:#f2f2f2;  
+}
+/*.aboutUsBanner{
+    text-align: center;
+    
+}*/
+
+.about2{
+    text-align: center;
+}
+
+.about3{
+    font-weight: bold;
+}
+
+.aboutUsBox{
+/*    border: white;
+    border-width: 30px;
+    border-style: solid;*/
+padding: 20px;
+}
+
+.sidepicAbout{
+    width: 450px;
+    height: 561.5px;
+    float: left;
+}
+
+.logos1about{
+    width: 60px;
+    height:50px;
+    margin: 5px;
+}
+
+.logos2about{
+    width: 50px;
+    height:auto;
+    margin: 5px;
+}
+
+.checkmark{
+    width:30px;
+    height:30px;
+    
+}
+/**********************ABOUT US******************/
+
+/* ********landing page***********/
+
+.welcome{
+    padding: 50px;
+/*    need diff font*/
+    font-family: geraldine;
+    font-size: 75px;
+    text-align: center;
+    color:white;
+    top: 400px;
+    position: relative;
+    
+}
+
+.bookNow{
+    background: #0066A2;
+	color: white;
+	border-style: outset;
+	border-color: #0066A2;
+	height: 50px;
+	width: 100px;
+	font: bold15px arial,sans-serif;
+	text-shadow: none;
+/*        border-radius: 7.5em 5em;*/
+          border-radius:5px;
+    float: right;
+    margin-right: 470px;
+    size: 500px;
+    position: relative;
+    bottom: 50px;
+}
+
+.bookNow:Hover{
+    color:lightblue;
+}
+
+.bookNow{cursor: pointer;}
+
+.opp{
+    color: black;
+    text-align: center;
+    width:100%;
+/*    background-image:
+            linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(background.jpg);*/
+    float:right;
+    padding: 20px;
+    font-size: 25px;
+    background-color: lightblue;
+    border-style: outset;
+    
+}
+
+.greatFor{
+    color: white;
+    text-align: center;
+    width:100%;
+    float:right;
+    padding: 20px;
+    font-size: 25px;
+    background-color: plum;
+    
+}
+.container{
+    
+/*    background-color: black;*/
+    padding:2rem;   
+}
+.grid{
+    
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-gap:2rem;
+}
+.cell{
+   
+/*    background-image:
+            linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(background.jpg);*/
+    background-color: pink;
+/*    padding:1rem;*/
+    padding:5px;
+}
+
+.cellText{
+    color:white;
+    padding: 2px;
+    text-align: center;
+    background-image:  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(background.jpg);
+}
+
+.box{
+    margin-left: 100px;
+    height: 300px;
+    width: auto;
+}
+
+.sidepicLanding{
+    width: 500px;
+    height: 500px;
+    float: left;
+}
+
+.sidepic{
+    width: 500px;
+    height: 500px;
+    float: left;
+}
+
+span{
+    font-weight: bold;
+}
+
+span::before {
+            content: "smile";
+            animation: animate infinite 3s;
+            padding-left: 10px;
+        }
+  
+        @keyframes animate {
+  
+            0% {
+                content: "smile";
+            }
+  
+            50% {
+                content: "laugh";
+            }
+  
+            75% {
+                content: "happy";
+            }
+        }
+
+/* ********landing page***********/
+
+/*************footer*************/
+
+
+.logos1{
+    width: 60px;
+    height:50px;
+    margin: 5px;
+}
+
+.logos2{
+    width: 50px;
+    height:auto;
+    margin: 5px;
+}
+
+
+
+.foot{
+    color:white;
+    font-size: 20px;
+}
+.footer{
+    margin-top: 100px;
+    padding: 30px;
+    text-align: center;
+    background-image:
+            linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(background.jpg);
+    
+}
+
+/*************footer*************/
+
+
+
+/*
+********************FORMS******************/
+
+
+input[class=submit2] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[class=loginSub] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[class=loginSub]:hover {
+  background-color: #45a049;
+}
+
+input[class=cancelSub] {
+  width: 100%;
+  background-color:red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[class=cancelSub]:hover {
+    background-color: #cc0033;
+}
+
+/*
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}*/
+/*input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}*/
+
+input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[class=submit2]:hover {
+  background-color: #45a049;
+}
+
+input[type=number] {
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email] {
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.formDiv {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  color: black;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+textArea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*******create acc names**********/
+input[class=nameField]{
+    width: 49.4%;
+  padding: 12px ;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[class=field], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*
+********************FORMS******************/
+
+
+/*******************Manager*****************/
+.managerMain{
+    text-align: center;
+/*    border-radius: 50px;
+  background-color: #f2f2f2;
+
+*/  padding: 20px;/*
+  color: black;
+  margin-left: 300px;
+  margin-right: 300px;*/
+border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5); /* Green background with 30% opacity */
+  padding: 20px;
+  color: gold;
+}
+
+input[class=managerField]:hover {
+  background-color: yellow;
+  cursor: pointer; 
+}
+input[class=managerField]{
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:gold;
+  
+}
+
+.navMan{
+  background: none;
+  border: none;
+  padding: 0;
+  font-family:sans-serif;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+}
+
+
+.managerHead{
+/*    background-color: white;
+    */
+}
+
+.manFormDiviv{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  color: black;
+ 
+}
+
+table {
+  border-collapse: collapse;
+  padding: 8px;
+  border: 1px solid #333;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th, td {
+   
+ 
+  width: 10%;
+}
+
+th{
+    font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 2%;
+  background-color: #333;
+  color: white;
+  border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+
+
+input[class=mansub] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[class=mansub2] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[class=mansub3] {
+  width: 32.58%;
+  background-color: grey;
+  color: white;
+  padding: 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[class=mansub]:hover {
+  background-color: #45a049;
+}
+
+input[class=mansubsmall]{
+   width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; 
+}
+
+input[class=mansubsmall]:hover{
+   background-color: #45a049; 
+}
+
+input[class=save]{
+   width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;  
+  float: left;
+  display: inline;
+}
+
+input[class=can]{
+  width: 50%;
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;  
+  float: left;
+  display: inline;
+}
+
+input[class=approvalCan]{
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;  
+}
+
+input[class=approvalApp]{
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;  
+}
+input[class=approvalRef]{
+  width: 100%;
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;  
+}
+
+.special{
+/* font-weight: bold;*/
+ background-color: gainsboro;
+}
+
+.specialties{
+    background-color: gainsboro;
+    width: 15px;
+        height: 15px;
+        padding: 0;
+        margin: 0;
+        vertical-align: bottom;
+        position: relative;
+        
+}
+
+ input[type=checkbox] {
+            vertical-align: middle;
+            position: relative;
+            bottom: 1px;
+    /*            float: right;*/
+        }
+        
+        
+/*        input[type=checkbox] {
+  
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+}*/
+
+/*.specialCheck{
+   vertical-align: middle;
+            position: relative;
+            bottom: 1px; 
+}
+.specialties{
+    display: block;
+}*/
+/*******************Manager*****************/
+
+
+/*not in use */
+.galleryimg{
+    width: 75%;
+    height: 25%;
+    position: center;
+    text-align: center;
+    padding: 50px;
+}
+/*not in use */
+
+.contentContainer{
+    width: 100%;
+    height: auto;
+}
+
+
+.serviceBox{
+  padding: 100px;
+  float:right;
+  
+}
+
+.service{
+    font-size: 15px;
+    position: relative;
+   
+}
+
+
+
+.sidepic-right{
+    width: 500px;
+    height: 500px;
+    float: right;
+}
+
+
