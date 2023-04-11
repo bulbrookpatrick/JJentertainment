@@ -79,13 +79,15 @@
                 <c:forEach items="${dates}" var="date">
                    
                     <div class="grid-item <c:choose>
-                             <c:when test="${date.getMonthValue() + 1 == intMonth}">
+                             <c:when test="${date.getMonthValue() == intMonth}">
                                  "
+                                 
                              </c:when>
                              <c:otherwise>
                                  otherMonth"
+                                 
                              </c:otherwise>
-                    </c:choose>><span class = "day"><c:out value="${date.getDayOfMonth()}"/> </span>
+                    </c:choose><span class = "day"><c:out value="${date.getDayOfMonth()}"/> </span>
                          <c:forEach items="${events}" var="event">
                             
                              <c:if test = "${date.getDayOfMonth() == event.getStart().getDate()}">

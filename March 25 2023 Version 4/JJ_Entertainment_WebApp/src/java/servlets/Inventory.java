@@ -88,7 +88,7 @@ public class Inventory extends HttpServlet {
           
   int intMonth = 0;
   intMonth = today.getMonthValue();
- request.setAttribute("intMonth", intMonth + 1);
+ request.setAttribute("intMonth", intMonth);
 //  add a parameter check for month + year so it doesnt rest when switching months
   if (action != null && action.equals("nextMonth")) {
       displayCurrDate = 0;
@@ -104,7 +104,13 @@ public class Inventory extends HttpServlet {
           }
           
       }
-           request.setAttribute("intMonth", intMonth + 2);
+       if (intMonth + 1 == 13) {
+      request.setAttribute("intMonth", 1);
+      } else { 
+      request.setAttribute("intMonth", intMonth + 1);
+      }
+      
+           
      
       LocalDate prev = LocalDate.of(year, intMonth, 1);
       prev = prev.plusMonths(1);
@@ -124,17 +130,25 @@ public class Inventory extends HttpServlet {
              
               
           }
+            
+            
+            
+
+  }
+       
           
-          
-           request.setAttribute("intMonth", intMonth);
-     
       LocalDate prev = LocalDate.of(year, intMonth, 1);
       prev = prev.minusMonths(1);
-      today = prev;
-  }
+      today = prev; 
+      
+      if (intMonth - 1 == 0) {
+      request.setAttribute("intMonth", 12);
+      } else { 
+      request.setAttribute("intMonth", intMonth - 1);
+      }
   }
   
-  
+  System.out.println();
   LocalDate dayone = today.withDayOfMonth(1);
   LocalDate lastday = today.withDayOfMonth(today.getMonth().length(today.isLeapYear()));
 

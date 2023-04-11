@@ -22,7 +22,7 @@
                 <li><a href="landing?page=gallery">Gallery</a></li>
                 <li><a href="landing?page=about">About</a></li>
                 <li><a href="landing?page=contact">Contact</a></li>
-                <li><a href="landing?page=login">Login</a></li>
+                <li><a  href="landing?page=login">Login</a></li>
             </ul>
         
         </div>

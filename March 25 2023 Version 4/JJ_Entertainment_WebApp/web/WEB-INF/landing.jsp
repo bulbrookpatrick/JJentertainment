@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>JJ Home</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <script src="/css/sidebar.js" defer></script>
 </head>
 <body>
     <div class="contentContainer">

@@ -23,9 +23,20 @@
                 <li><a href="loggedcustomer?page=gallery">Gallery</a></li>
                 <li><a href="loggedcustomer?page=about">About</a></li>
                 <li><a href="loggedcustomer?page=contact">Contact</a></li>
-                <li><a href="loggedcustomer?page=profile">${username}</a></li>
+                <li><a id="profile" onclick="openNav()">${username}</a></li>
             </ul>
-            
+            </div>
+            <!--sidebar element-->
+            <link rel="stylesheet" href="/css/sidebar.css">
+    <script src="/css/sidebar.js" defer></script>
+            <div id="mySidenav" class="sidenav">
+            <!-- &times is the multiplication symbol -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!--sidenav attribute-->
+            <a href="/" method="POST" action="Logout">Logout</a>
+          
+          </div>
+    
         </div>
            
     </div>

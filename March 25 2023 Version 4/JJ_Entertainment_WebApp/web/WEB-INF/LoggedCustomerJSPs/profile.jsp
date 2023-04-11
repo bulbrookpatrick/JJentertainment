@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="/css/style.css">
+        <script src="sidebar.js" defer></script>
         <title>Login</title>
     </head>
     <body>
@@ -25,7 +26,7 @@
                 <li><a href="loggedcustomer?page=gallery">Gallery</a></li>
                 <li><a href="loggedcustomer?page=about">About</a></li>
                 <li><a href="loggedcustomer?page=contact">Contact</a></li>
-                <li><a href="loggedcustomer?page=profile">${username}</a></li>
+                <li><a id="profile" href="loggedcustomer?page=profile">${username}</a></li>
             </ul>
             </div>
         
