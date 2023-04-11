@@ -34,7 +34,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <!--sidenav attribute-->
             <a href="/" method="POST" action="Logout">Logout</a>
-          
+            <a href="#">Events</a>
           </div>
     
         </div>
